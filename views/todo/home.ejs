@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+ <div class="container">
+<div class="sub-container">
+    <div class="mini">
+        <h1 class="list">to-do list</h1>
+        <form action="/" method="POST">
+            <div class="inp">
+                <p><input type="text" name="" id="" placeholder="some text...."></p>
+                <button class="plus">add</button>
+                
+            </div>
+        </form> 
+        <% for(let item of listtask ) {%>
+            <div class="conta">
+                
+            <div class="value"><%= item.description %></div> 
+        <%}%>
+
+        <a href="/<%=listtask.id%>/edit">edit</a>
+             <form action="/<%= listtask.id %>?_method=DELETE " method="post">
+                <button>delete</button>
+             </form>
+    
+</div>
+</div>
+        <div>
+
+       
+            
+    
+
+ </div>
+
+</body>
+</html>
